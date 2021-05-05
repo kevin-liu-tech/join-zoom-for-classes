@@ -1,0 +1,35 @@
+print("Opening Zoom")
+subprocess.Popen('C:\\Users\\gerni\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe')
+
+time.sleep(1)
+
+print("Joining A Meeting Now")
+join_btn = pyautogui.locateCenterOnScreen(r'C:\Users\gerni\Documents\Programming Projects\Life Hacks\Programming a Zoom Bot\join_button.png')
+pyautogui.moveTo(join_btn)
+pyautogui.click()
+
+time.sleep(1)
+
+print("Clicking Meeting ID")
+meeting_id_btn =  pyautogui.locateCenterOnScreen(r'C:\Users\gerni\Documents\Programming Projects\Life Hacks\Programming a Zoom Bot\meeting_id_button.png')
+pyautogui.moveTo(meeting_id_btn, duration=3)
+pyautogui.click()
+meetingid = "954 4584 0994"
+pyautogui.write(meetingid)
+
+time.sleep(1)
+
+print("Join Meeting")
+join_btn = pyautogui.locateCenterOnScreen(r'C:\Users\gerni\Documents\Programming Projects\Life Hacks\Programming a Zoom Bot\join_btn.png')
+pyautogui.moveTo(join_btn)
+pyautogui.click()
+
+time.sleep(5)
+
+print("Clicking Meeeting Passcode")
+meeting_pswd_btn = pyautogui.locateCenterOnScreen(r'C:\Users\gerni\Documents\Programming Projects\Life Hacks\Programming a Zoom Bot\meeting_pswd.png')
+pyautogui.moveTo(meeting_pswd_btn, duration=3)
+pyautogui.click()
+pswd = "662082"
+pyautogui.write(pswd)
+pyautogui.press('enter')
